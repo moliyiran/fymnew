@@ -1,0 +1,47 @@
+迁移前，执行下列语句: 
+truncate table fym_add_queue;
+truncate table fym_source_1;
+truncate table fym_user_1;
+truncate table fym_user_detail_1;
+truncate table fym_visiter_index_1;
+
+crontab写法:
+*/1 * * * * checkTask.sh目录 指定到fym根目录
+
+注意db下mmysql.php的类名是否是NMMYSQL
+
+nginx+php上传大文件配置
+//nginx
+'client_max_body_size' => '500M',  #上传文件大小限制
+//php
+'upload_max_filesize' => '500M',  #允许上传文件大小的最大值,需在php.ini中配置
+'post_max_size' => '500M', #通过表单POST给PHP的所能接收的最大值，包括表单里的所有值,需在php.ini中配置
+'max_execution_time' => '600', #每个PHP页面运行的最大时间值(秒),仅对php页面有作用,可在代码中修改
+'max_input_time' => '600', #每个PHP页面接收数据所需的最大时间,仅对php页面有作用,可在代码中修改
+'memory_limit' => '600M', #每个PHP页面所吃掉的最大内存,仅对php页面有作用,可在代码中修改
+
+初始化库:
+truncate table host_map;
+truncate table host_visiter_samp;
+#truncate table host_valid_table;
+truncate table host_visiter_index_1;
+
+truncate table source_add_queue;
+truncate table source_bt_1;
+truncate table source_ditu_1;
+truncate table source_hou_1;
+truncate table source_img_1;
+truncate table source_juzi_1;
+truncate table source_juzi2_1;
+truncate table source_keyword_1;
+truncate table source_lanmu_1;
+truncate table source_moban_1;
+truncate table source_pic_1;
+truncate table source_wailian_1;
+truncate table source_wzmz_1;
+truncate table source_zhon_1;
+
+truncate table temp_user_content;
+
+truncate table user_detail_1;
+truncate table user_samp;
